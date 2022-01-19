@@ -1,4 +1,5 @@
-import 'package:custody_angel/view/splash_screen.dart';
+import 'package:custody_angel/pages/login_page.dart';
+import 'package:custody_angel/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/',
-          page: () => const SplashScreen(),
+          page: () => const LoginPage(),
         ),
       ],
     );
