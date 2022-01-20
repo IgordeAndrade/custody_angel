@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'login_page.dart';
-
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -20,7 +18,7 @@ class SplashScreen extends StatelessWidget {
                 scale: 1.5,
               ),
               TextButton(
-                onPressed: () => Get.to(const LoginPage()),
+                onPressed: () => Get.toNamed('/login'),
                 child: const Text(
                   'Anjo da Guarda',
                   style: TextStyle(
