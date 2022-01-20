@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 3))
+        .then((value) => Get.toNamed('/login'));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +29,12 @@ class SplashScreen extends StatelessWidget {
                 'assets/images/angel.png',
                 scale: 1.5,
               ),
-              TextButton(
-                onPressed: () => Get.toNamed('/login'),
-                child: const Text(
-                  'Anjo da Guarda',
-                  style: TextStyle(
-                    color: Color(0xff952f25),
-                    fontFamily: 'MedievalSharp',
-                    fontSize: 30,
-                  ),
+              const Text(
+                'Anjo da Guarda',
+                style: TextStyle(
+                  color: Color(0xff952f25),
+                  fontFamily: 'MedievalSharp',
+                  fontSize: 30,
                 ),
               ),
             ],
