@@ -3,6 +3,7 @@
         "splash_screen",
         "login_page",
         "home_page",
-        "global"
+        "global",
+        "bible_api"
     ]
 }
