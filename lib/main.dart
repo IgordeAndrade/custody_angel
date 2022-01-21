@@ -1,3 +1,4 @@
+import 'package:custody_angel/pages/global/presentation/home_page.dart';
 import 'package:custody_angel/pages/login_page.dart';
 import 'package:custody_angel/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -11,16 +12,29 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final ThemeData tema = ThemeData();
     return GetMaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: tema.copyWith(
+        colorScheme: tema.colorScheme.copyWith(
+          primary: const Color(0xff952f25),
+        ),
       ),
       getPages: [
         GetPage(
-            name: '/',
-            page: () => const SplashScreen(),
-            children: [GetPage(name: '/login', page: () => const LoginPage())]),
+          name: '/',
+          page: () => const SplashScreen(),
+          children: [
+            GetPage(
+              name: '/login',
+              page: () => const LoginPage(),
+            ),
+            GetPage(
+              name: '/homePage',
+              page: () => const HomePage(),
+            ),
+          ],
+        ),
       ],
     );
   }
