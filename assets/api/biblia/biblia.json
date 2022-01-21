@@ -5,7 +5,7 @@
             "Conteudo": [
                 {
                     "Capitulo": 1,
-                    "Conteudo": [
+                    "ConteudoVer": [
                         {
                             "Versiculo":1,
                             "text":"No princípio, Deus criou os céus e a terra."
@@ -141,7 +141,7 @@
             "Conteudo": [
                 {
                     "Capitulo": 1,
-                    "Conteudo": [
+                    "ConteudoVer": [
                         {
                             "Versiculo":1,
                             "text":"No princípio, Deus criou os céus e a terra."

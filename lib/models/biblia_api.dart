@@ -1,33 +1,59 @@
-class BibliaApiModel {
-  List<Genesis>? genesis;
+class BibliaModel {
+  List<Livros>? livros;
 
-  BibliaApiModel({this.genesis});
+  BibliaModel({this.livros});
 
-  BibliaApiModel.fromJson(Map<String, dynamic> json) {
-    if (json['Genesis'] != null) {
-      genesis = <Genesis>[];
-      json['Genesis'].forEach((v) {
-        genesis!.add(Genesis.fromJson(v));
+  BibliaModel.fromJson(Map<String, dynamic> json) {
+    if (json['livros'] != null) {
+      livros = <Livros>[];
+      json['livros'].forEach((v) {
+        livros!.add(Livros.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    if (genesis != null) {
-      data['Genesis'] = genesis!.map((v) => v.toJson()).toList();
+    if (livros != null) {
+      data['livros'] = livros!.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
-class Genesis {
+class Livros {
+  String? titulo;
+  List<Conteudo>? conteudo;
+
+  Livros({this.titulo, this.conteudo});
+
+  Livros.fromJson(Map<String, dynamic> json) {
+    titulo = json['titulo'];
+    if (json['Conteudo'] != null) {
+      conteudo = <Conteudo>[];
+      json['Conteudo'].forEach((v) {
+        conteudo!.add(Conteudo.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['titulo'] = titulo;
+    if (conteudo != null) {
+      data['Conteudo'] = conteudo!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Conteudo {
   int? capitulo;
   List<Conteudo>? conteudo;
 
-  Genesis({this.capitulo, this.conteudo});
+  Conteudo({this.capitulo, this.conteudo});
 
-  Genesis.fromJson(Map<String, dynamic> json) {
+  Conteudo.fromJson(Map<String, dynamic> json) {
     capitulo = json['Capitulo'];
     if (json['Conteudo'] != null) {
       conteudo = <Conteudo>[];
@@ -47,13 +73,13 @@ class Genesis {
   }
 }
 
-class Conteudo {
+class ConteudoVer {
   int? versiculo;
   String? text;
 
-  Conteudo({this.versiculo, this.text});
+  ConteudoVer({this.versiculo, this.text});
 
-  Conteudo.fromJson(Map<String, dynamic> json) {
+  ConteudoVer.fromJson(Map<String, dynamic> json) {
     versiculo = json['Versiculo'];
     text = json['text'];
   }

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:custody_angel/controllers/biblia_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,7 +18,8 @@ class BibliaPage extends GetView<BibliaController> {
           width: MediaQuery.of(context).size.width,
           color: const Color(0xFFdfd3ba),
           padding: const EdgeInsets.all(10),
-          child: const Text('controller.bibliaList.'),
+          child: Text(
+              'controller.bibliaList[e].conteudo![0].capitulo!.toString()'),
         ),
       ),
       title: 'Bíblia Sagrada',

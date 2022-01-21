@@ -1,5 +1,5 @@
 import 'package:custody_angel/models/biblia_api.dart';
 
 abstract class BibliaRepository {
-  Future<List<BibliaApiModel>> getList();
+  Future<List<Livros>> getList();
 }

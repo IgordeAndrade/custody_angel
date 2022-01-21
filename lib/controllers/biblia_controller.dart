@@ -6,9 +6,11 @@ class BibliaController extends GetxController {
   final BibliaRepository repository;
   BibliaController(this.repository);
 
-  List<BibliaApiModel> bibliaList = <BibliaApiModel>[].obs;
+  List<Livros> bibliaList = <Livros>[].obs;
 
   fetch() async {
-    bibliaList = await repository.getList();
+    await repository.getList().then((value) {
+      bibliaList = value;
+    });
   }
 }
