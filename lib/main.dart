@@ -1,6 +1,6 @@
-import 'package:custody_angel/pages/global/presentation/home_page.dart';
-import 'package:custody_angel/pages/login_page.dart';
-import 'package:custody_angel/pages/splash_screen.dart';
+import 'package:custody_angel/views/global/presentation/home_page.dart';
+import 'package:custody_angel/views/login_page.dart';
+import 'package:custody_angel/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
