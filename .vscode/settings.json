@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "splash_screen",
-        "login_page"
+        "login_page",
+        "home_page"
     ]
 }
