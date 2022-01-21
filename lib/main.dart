@@ -1,4 +1,4 @@
-import 'package:custody_angel/views/global/presentation/home_page.dart';
+import 'package:custody_angel/views/global/home_page.dart';
 import 'package:custody_angel/views/login_page.dart';
 import 'package:custody_angel/views/splash_screen.dart';
 import 'package:flutter/material.dart';

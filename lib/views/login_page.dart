@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'global/presentation/widgets/default_page.dart';
-import 'global/presentation/widgets/default_title.dart';
+import 'global/widgets/default_page.dart';
+import 'global/widgets/default_title.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
