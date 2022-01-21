@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:custody_angel/models/biblia_api.dart';
 import 'package:flutter/services.dart';
 

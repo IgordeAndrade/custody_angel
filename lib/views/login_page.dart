@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'global/widgets/default_page.dart';
-import 'global/widgets/default_title.dart';
-
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return DefaultPage(
-      body: Column(
+    return Material(
+      color: const Color(0xFFdfd3ba),
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
@@ -20,9 +18,11 @@ class LoginPage extends StatelessWidget {
               scale: 4.5,
             ),
           ),
-          const DefaultTitle(
-            fontSize: 20,
-          ),
+          const Text('Anjo da guarda',
+              style: TextStyle(
+                fontSize: 20,
+                fontFamily: 'MedievalSharp',
+              )),
           const SizedBox(
             height: 15,
           ),

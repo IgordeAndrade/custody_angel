@@ -1,3 +1,5 @@
+import 'package:custody_angel/controllers/my_bindings.dart';
+import 'package:custody_angel/views/global/biblia_page.dart';
 import 'package:custody_angel/views/global/home_page.dart';
 import 'package:custody_angel/views/login_page.dart';
 import 'package:custody_angel/views/splash_screen.dart';
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
           primary: const Color(0xff952f25),
         ),
       ),
+      initialBinding: MyPageBinding(),
       getPages: [
         GetPage(
           name: '/',
@@ -32,6 +35,10 @@ class MyApp extends StatelessWidget {
             GetPage(
               name: '/homePage',
               page: () => const HomePage(),
+            ),
+            GetPage(
+              name: '/bibliaPage',
+              page: () => const BibliaPage(),
             ),
           ],
         ),
