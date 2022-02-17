@@ -1,4 +1,3 @@
-import 'package:custody_angel/repositories/biblia_repository_mock.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,9 +9,7 @@ class MenuList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Map<String, Function()> buttons = {
-      'Orações': () => () {
-            BibliaRepositoryMock().getList();
-          },
+      'Orações': () => Get.toNamed('/oracoes'),
       'Santo do dia': () => () {},
       'Liturgia diária': () => () {},
       'Novenas': () => () {},
