@@ -15,5 +15,4 @@ class OracoesPage extends DefaultPage {
           title: 'Oração',
           titleFontSize: 20,
         );
-  
 }

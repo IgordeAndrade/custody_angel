@@ -38,6 +38,7 @@ class DefaultPage extends StatelessWidget {
         ],
       ),
       body: Container(
+        padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         color: const Color(0xFFdfd3ba),
